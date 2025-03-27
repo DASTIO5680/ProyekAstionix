@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Edukasi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Loading Awal -->
+    <div id="awal">
+        <video autoplay muted id="loading-video">
+            <source src="naga.mp4" type="video/mp4">
+        </video>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+            <p id="progress-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Menu Utama -->
+    <div id="menu" style="display: none;">
+        <div class="logo">
+            <img src="Astionix.jpg" alt="Logo">
+        </div>
+        <div class="tombol">
+            <button id="start-game">Mulai Game</button>
+        </div>
+    </div>
+
+    <!-- Pemilihan Level -->
+    <div id="level-selection" style="display: none;">
+        <h2>Pilih Tingkat Pendidikan</h2>
+        <div class="tombol">
+            <button id="sd">SD</button>
+            <button id="smp">SMP</button>
+            <button id="smk">SMK</button>
+        </div>
+    </div>
+
+    <!-- Pemilihan Mata Pelajaran -->
+    <div id="subject-selection" style="display: none;">
+        <h2>Pilih Mata Pelajaran</h2>
+        <div id="subjects-list"></div>
+    </div>
+
+    <!-- Halaman Game -->
+    <div id="game" style="display: none;">
+        <p id="question"></p>
+        <input type="text" id="answer" placeholder="Ketik jawaban...">
+        <div class="tombol">
+            <button id="jawab">Jawab</button>
+        </div>
+        <p id="feedback"></p>
+        <div class="tombol">
+            <button id="back-to-level">Kembali ke Level</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Variabel CSS */
+:root {
+    --red-glow: rgba(255, 0, 0, 0.9);
+    --red-strong: rgba(255, 0, 0, 1);
+    --red-light: rgba(255, 0, 0, 0.7);
+    --white-translucent: rgba(255, 255, 255, 0.7);
+}
+
+/* Body */
+body {
+    background: url('916.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+/* Menu utama */
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1000vh; /* Agar lebih tengah */
+}
+
+/* Logo */
+#menu img {
+    width: 180px;
+    margin-bottom: 15px;
+}
+
+/* Input jawaban */
+#answer {
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    border: 2px solid var(--red-strong);
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    box-shadow: inset 0 0 8px var(--red-light);
+    outline: none;
+    transition: 0.3s ease-in-out;
+    margin: 20px 0;
+}
+
+/* Efek saat input difokuskan */
+#answer:focus {
+    background: rgba(255, 0, 0, 0.2);
+    box-shadow: inset 0 0 12px var(--red-strong), 0 0 15px var(--red-strong);
+}
+
+/* Placeholder */
+#answer::placeholder {
+    color: var(--white-translucent);
+}
+
+/* Tombol */
+button {
+    padding: 12px;
+    color: white;
+    border: 2px solid var(--red-strong);
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    width: 250px;
+    transition: 0.25s ease-in-out;
+    box-shadow: inset 0 0 5px var(--red-glow), 0 0 10px var(--red-light);
+    margin: 15px 0;
+}
+
+/* Efek hover */
+button:hover {
+    box-shadow: inset 0 0 8px var(--red-strong), 0 0 20px var(--red-strong);
+    transform: scale(1.08);
+}
+
+/* Saat ditekan */
+button:active {
+    background: var(--red-strong);
+    box-shadow: inset 0 0 15px var(--red-strong), 0 0 30px var(--red-strong);
+    transform: scale(0.96);
+}
+
+/* Info level */
+.level-info {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Loading screen */
+#awal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Video loading */
+#loading-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Progress Text */
+#progress-text {
+    position: absolute;
+    bottom: 50%; /* Lebih dekat progress bar */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Biar soal, input, tombol selalu di tengah dalam game */
+#game-screen {
+    width: 100vw;
+    height: 100vh;
+    max-width: 540px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
